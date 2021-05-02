@@ -12,6 +12,8 @@ guess_count = 0
 
 for i in range(rand_num):
     user_guess = int(input(f'{user_name}, guess a number between 1 and 100.'))
+    if user_guess not in range(rand_num):
+        print("Does that look like it's between 1 and 100? Try again, but do better this time.")
     if user_guess != rand_num:
         if user_guess > rand_num:
             print("Too high. Guess again.")
@@ -29,4 +31,4 @@ for i in range(rand_num):
 #guess count function
 #total count function
 #game over output
-
+#make sure to mock failure
